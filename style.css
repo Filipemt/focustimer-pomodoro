@@ -1,0 +1,232 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-color: #FFFFFF;
+    --text-color: #323238;
+    font-size: 62.5%;
+}
+
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+#theme{
+    position: absolute;
+    right: 2.4rem;
+    top: -1.6rem;
+    cursor: pointer;
+}
+
+#timer{
+    font-size: clamp(10rem, 2rem + 10vw, 12.6rem);
+    line-height: 14.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0 4rem 4rem;
+}
+
+#controls.dark path{
+    fill: #C4C4CC;
+}
+
+#controls button:hover{
+    scale: 1;
+    transition: 200ms;
+}
+
+#controls svg{
+    width: clamp(1rem, 1rem + 20vw, 4.0rem);
+}
+
+.hide{
+    display: none;
+}
+
+#sounds{
+    display: grid;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    grid-template-areas:"A E"
+                        "B F";
+}
+
+#sounds.dark path:nth-child(2){
+    fill: #C4C4CC;
+}
+
+#sounds.dark path:nth-child(1){
+    fill: #29292E;
+}
+
+#sounds button:hover{
+    scale: 1.02;
+    transition: 300ms;
+}
+
+.fireplace path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+.coffee-shop path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+.forest path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+.rain path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+} 
+
+#sounds.dark .fireplace path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+#sounds.dark .coffee-shop path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+#sounds.dark .forest path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+#sounds.dark .rain path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+
+.fireplace.selected path:nth-child(1){
+    fill: #237f9d3b;
+    
+    transition: 300ms;
+}
+.coffee-shop.selected path:nth-child(1){
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+.forest.selected path:nth-child(1){
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+.rain.selected path:nth-child(1){
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+
+#sounds.dark  .fireplace.selected path:nth-child(1){
+    fill: #237f9d3b;
+    
+    transition: 300ms;
+}
+#sounds.dark  .coffee-shop.selected path:nth-child(1){
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+#sounds.dark  .forest.selected path:nth-child(1){
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+#sounds.dark  .rain.selected path:nth-child(1){
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+
+input[type='range'] {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 9.6rem;
+    height: .4rem;
+    border-radius: .5rem;
+    background-color: purple;
+    cursor: pointer;
+
+    position: absolute;
+    left: 2.1rem;
+    bottom: 1.6rem;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background-color: var(--text-color);
+}
+
+button.forest,
+button.rain,
+button.coffee-shop,
+button.fireplace {
+    position: relative;
+    height: 15rem;
+}
+
+input:hover{
+    scale: 1.03;
+    transition: 300ms;
+}
+
+#sounds.dark input[type='range'] {
+    background-color: purple;
+
+}
+#sounds.dark input[type='range']::-webkit-slider-thumb {
+    background-color: var(--background-color);
+}
+
+#bg{
+    background-color: var(--background-color);
+}
+
+@media (min-width: 768px) {
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+        gap: 3.2rem;
+    }
+    #theme{
+        position: fixed;
+        right: 6.4rem;
+        top: 6.4rem;
+        cursor: pointer;    
+    }
+}
+
+@media (min-width: 1200px) {
+    main{
+        margin-top: 13%;
+        gap: 19.2rem;
+    }
+    #controls {
+        gap: 5.1rem;
+        margin: 2.2rem;
+    }
+    #sounds{
+        gap: 3.2rem;
+    }
+}
